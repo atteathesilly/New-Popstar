@@ -48,31 +48,22 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 						next canEditTeam && !inDonationBox && !lastPokemonInParty
 					},
 					:press_proc => Proc.new { |scene|
-						destbox = @storageScene.pbChooseBox(_INTL("Move to which Box?"))
-						storageBox = @storageScreen.storage[destbox]
-						if destbox == -1
-							@storageScene.clearMultiselect
-							next true
-						end
-						if storageBox.nitems + @pkmn.length > storageBox.length
-							pbDisplay(_INTL("Not enough space!"))
-							if destbox == -1
-								@storageScene.clearMultiselect
-							end
-						else
-							@pkmn.each { |x| 
-								if storageBox.isDonationBox?
-									next false if !@storageScreen.pbStoreDonation(@storageScreen.storage[x[0],x[1]])
-								end
-								firstfree = @storageScreen.storage.pbFirstFreePos(destbox)
-								@storageScreen.storage.pbMove(destbox,firstfree,x[0],x[1])
-							}
-							@storageScene.clearMultiselect
-							pbHardRefresh
-						end
+						@storageScreen.pbMultiselectMove(@pkmn)
 						next true
 					},
 				}
+				if @pkmn[0][0] > -1 # Not in party
+					@cardButtons[:WITHDRAW] = {
+						:label => _INTL("Withdraw"),
+						:active_proc => Proc.new {
+							next canEditTeam && !inDonationBox
+						},
+						:press_proc => Proc.new { |scene|
+							@storageScreen.pbMultiselectWithdraw(@pkmn)
+							next true
+						},
+					}
+				end
 	
 			elsif @heldpoke
 				if @storageScreen.storage[@selected[0], @selected[1]] # Is there a pokemon in the spot?
@@ -112,7 +103,16 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 			end
 		when 1
 			if @isMultiselect
-				PBDebug.log("Multiselect tiles - Withdraw")
+				@cardButtons[:WITHDRAW] = {
+					:label => _INTL("Withdraw"),
+					:active_proc => Proc.new {
+						next canEditTeam && !inDonationBox
+					},
+					:press_proc => Proc.new { |scene|
+						@storageScreen.pbMultiselectWithdraw(@pkmn)
+						next true
+					},
+				}
 			else
 				@cardButtons[:WITHDRAW] = {
 						:label => _INTL("Withdraw"),
@@ -127,7 +127,16 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 			end
 		when 2
 			if @isMultiselect
-				PBDebug.log("Multiselect tiles - Deposit")
+				@cardButtons[:STORE] = {
+					:label => _INTL("Store"),
+					:active_proc => Proc.new {
+						next canEditTeam && !lastPokemonInParty
+					},
+					:press_proc => Proc.new { |scene|
+						@storageScreen.pbMultiselectMove(@pkmn)
+						next true
+					},
+				}
 			else
 				@cardButtons[:STORE] = {
 						:label => _INTL("Store"),

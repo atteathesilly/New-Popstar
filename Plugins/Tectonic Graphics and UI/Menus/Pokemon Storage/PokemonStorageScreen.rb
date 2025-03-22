@@ -43,28 +43,9 @@ class PokemonStorageScreen
                         return true
                     end
                 elsif @scene.multiselectCount > 1
-                    selectedBox = selected[0]
-                    pokemonList = selected
-                    pokemonList.delete_at(0)
-                    if command == 4
-                        selectedBox
-                        if selectedBox > -1 && @storage[selectedBox].isDonationBox?
-                            pbPlayBuzzerSE
-                            pbDisplay(_INTL("You cannot select a donated Pokémon!"))
-                            next
-                        end
-                    end
-                    if pokemonList.any?(nil)
-                        pbPlayBuzzerSE
-                        pbDisplay(_INTL("That Pokémon is not a valid choice!"))
-                        next
-                    end
-                    pokemonZip = pokemonList.map { |x| [selectedBox, x] }
-
-                    interactionScene = TilingCardsStorageInteractionMenu_Scene.new(command,pokemonZip,selected,nil,self,@scene,true)
-                    interactionScreen = TilingCardsStorageInteractionMenu.new(interactionScene)
-                    interactionScreen.pbStartPokemonMenu
-                    if selectedBox == -1
+                    shouldCloseAfter = selected[0] == -1
+                    pbStartMultiselectScreen(selected, command)
+                    if shouldCloseAfter
                         @scene.pbHidePartyTab
                     end
                 else
@@ -112,6 +93,8 @@ class PokemonStorageScreen
                 if selected.nil?
                     next if command == 4 || pbConfirm(_INTL("Continue Box operations?"))
                     break
+                elsif @scene.multiselectCount > 1
+                    pbStartMultiselectScreen(selected, command)
                 else
                     case selected[0]
                     when -2   # Party Pokémon
@@ -131,7 +114,7 @@ class PokemonStorageScreen
                     end
                     pokemon = @storage[selected[0], selected[1]]
                     next unless pokemon
-
+                    
                     interactionScene = TilingCardsStorageInteractionMenu_Scene.new(command,pokemon,selected,nil,self,@scene,false)
                     interactionScreen = TilingCardsStorageInteractionMenu.new(interactionScene)
                     interactionScreen.pbStartPokemonMenu
@@ -148,6 +131,8 @@ class PokemonStorageScreen
                         break
                     end
                     next
+                elsif @scene.multiselectCount > 1
+                    pbStartMultiselectScreen(selected, command)
                 elsif selected < 0
                     next if pbConfirm(_INTL("Continue Box operations?"))
                     break
@@ -170,6 +155,23 @@ class PokemonStorageScreen
         else
             return false
         end
+    end
+
+    def pbStartMultiselectScreen(selected, command)
+        selectedBox = selected[0]
+        pokemonList = selected
+        pokemonList.delete_at(0)
+
+        if pokemonList.any?(nil)
+            pbPlayBuzzerSE
+            pbDisplay(_INTL("That Pokémon is not a valid choice!"))
+            return false
+        end
+        pokemonZip = pokemonList.map { |x| [selectedBox, x] }
+
+        interactionScene = TilingCardsStorageInteractionMenu_Scene.new(command,pokemonZip,selected,nil,self,@scene,true)
+        interactionScreen = TilingCardsStorageInteractionMenu.new(interactionScene)
+        interactionScreen.pbStartPokemonMenu
     end
 
     def pbUpdate # For debug
@@ -234,6 +236,44 @@ class PokemonStorageScreen
         end
         @scene.pbRefresh
         return true
+    end
+
+    def pbMultiselectWithdraw(pkmnlist)
+        remainingSlots = Settings::MAX_PARTY_SIZE - @storage.party.length
+		if (remainingSlots - pkmnlist.length) < 0
+			pbDisplay(_INTL("Not enough space!"))
+			return
+		end
+		pkmnlist.each { |x|
+			pbWithdraw(x, nil)
+		}
+		@scene.clearMultiselect
+		pbHardRefresh
+    end
+
+    def pbMultiselectMove(pkmnlist)
+        destbox = @scene.pbChooseBox(_INTL("Move to which Box?"))
+		storageBox = @storage[destbox]
+		if destbox == -1
+			@scene.clearMultiselect
+			return
+		end
+		if storageBox.nitems + pkmnlist.length > storageBox.length
+			pbDisplay(_INTL("Not enough space!"))
+			if destbox == -1
+				@scene.clearMultiselect
+			end
+		else
+			pkmnlist.each { |x| 
+				if storageBox.isDonationBox?
+					next false if !pbStoreDonation(@storage[x[0],x[1]])
+				end
+				firstfree = @storage.pbFirstFreePos(destbox)
+				@storage.pbMove(destbox,firstfree,x[0],x[1])
+			}
+			@scene.clearMultiselect
+			pbHardRefresh
+		end
     end
 
     def pbStore(selected, heldpoke)

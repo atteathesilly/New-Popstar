@@ -347,7 +347,7 @@ class PokemonStorageScene
                     pbUpdateOverlay(selection)
                     pbSetMosaic(selection)
                 end
-            elsif Input.triggerex?(:W) && @command == 0 # Organize only
+            elsif Input.triggerex?(:W) && (@command == 0 || @command == 1) # Organize or Withdraw
                 if selection != -1 && !@quickswap && @storage[@storage.currentBox, selection] != nil && !inDonationBox?
                     if @multiselect.include?(selection)
                         @multiselect.delete(selection)
@@ -448,7 +448,7 @@ class PokemonStorageScene
                 pbSetMosaic(selection)
             end
             update
-            if Input.triggerex?(:W) && @command == 0 # Organize only
+            if Input.triggerex?(:W) && (@command == 0 || @command == 2) # Organize or deposit
                 if selection >= 0 && selection < Settings::MAX_PARTY_SIZE
                     if @multiselect.include?(selection)
                         @multiselect.delete(selection)
@@ -474,6 +474,7 @@ class PokemonStorageScene
                     clearMultiselect
                     return @selection
                 elsif !@multiselect.empty?
+                    @multiselect = @multiselect.sort{|a, b|b <=> a} # Needed for depositing pokemon in correct order from party
                     return @multiselect.prepend(-1)
                 elsif selection >= 0 && selection < Settings::MAX_PARTY_SIZE
                     @selection = selection
