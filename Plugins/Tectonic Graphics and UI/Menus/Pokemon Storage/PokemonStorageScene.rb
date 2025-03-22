@@ -348,13 +348,12 @@ class PokemonStorageScene
                     pbSetMosaic(selection)
                 end
             elsif Input.triggerex?(:W) && @command == 0 # Organize only
-                if selection != -1 && !@quickswap && @storage[@storage.currentBox, selection] != nil
+                if selection != -1 && !@quickswap && @storage[@storage.currentBox, selection] != nil && !inDonationBox?
                     if @multiselect.include?(selection)
                         @multiselect.delete(selection)
                     else
                         @multiselect.push(selection)
                     end
-                    PBDebug.log(@multiselect)
                     pbUpdateHighlights
                 end
             elsif Input.trigger?(Input::ACTION) && @command == 0 # Organize only
@@ -369,7 +368,9 @@ class PokemonStorageScene
                 return nil
             elsif Input.trigger?(Input::USE)
                 if multiselectCount == 1
-                    return [@storage.currentBox, @multiselect[0]]
+                    pkmnSelection = @multiselect[0]
+                    clearMultiselect
+                    return [@storage.currentBox, pkmnSelection]
                 end
                 if @multiselect.empty? 
                     @selection = selection
@@ -400,7 +401,6 @@ class PokemonStorageScene
                     @selection = 0
                 end
                 ret = pbSelectPartyInternal(party, false)
-                PBDebug.log(ret)
                 if !@multiselect.empty? && multiselectCount > 1
                     return ret
                 elsif ret < 0
@@ -455,7 +455,6 @@ class PokemonStorageScene
                     else
                         @multiselect.push(selection)
                     end
-                    PBDebug.log(@multiselect)
                     pbUpdateHighlights(true)
                 end
             elsif Input.trigger?(Input::ACTION) && @command == 0 # Organize only
@@ -463,7 +462,7 @@ class PokemonStorageScene
                     pbPlayDecisionSE
                     pbSetQuickSwap(!@quickswap)
                 else
-                    pbDisplay("Cannot use quickswap with multiselect.")
+                    pbDisplay(_INTL("Cannot use quickswap with multiselect."))
                 end
             elsif Input.trigger?(Input::BACK)
                 @selection = selection

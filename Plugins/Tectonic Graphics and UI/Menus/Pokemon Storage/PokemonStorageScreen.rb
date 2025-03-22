@@ -43,7 +43,6 @@ class PokemonStorageScreen
                         return true
                     end
                 elsif @scene.multiselectCount > 1
-                    PBDebug.log("Handle multiselect")
                     selectedBox = selected[0]
                     pokemonList = selected
                     pokemonList.delete_at(0)

@@ -60503,6 +60503,8 @@ The ally {1}
 {1} has been added to your party.
 Box "{1}" on the Pokémon Storage PC is a donation box.
 Box "{1}" on the Pokémon Storage PC is a donation box.
+Cannot use quickswap with multiselect.
+Cannot use quickswap with multiselect.
 {1} was transferred to box "{2}".
 {1} was transferred to box "{2}".
 Box "{1}" on the Pokémon Storage PC was full.

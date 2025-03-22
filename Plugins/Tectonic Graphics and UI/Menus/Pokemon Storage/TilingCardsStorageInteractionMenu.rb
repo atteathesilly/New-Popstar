@@ -42,10 +42,6 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 		case @command
 		when 0
 			if @isMultiselect
-				PBDebug.log("Multiselect tiles - Organise")
-				# Check if enough space
-				# "Pick up" pokemon
-				# "Drop" pokemon
 				@cardButtons[:MOVE] = {
 					:label => _INTL("Move"),
 					:active_proc => Proc.new {
@@ -65,9 +61,10 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 							end
 						else
 							@pkmn.each { |x| 
-								PBDebug.log(x)
+								if storageBox.isDonationBox?
+									next false if !@storageScreen.pbStoreDonation(@storageScreen.storage[x[0],x[1]])
+								end
 								firstfree = @storageScreen.storage.pbFirstFreePos(destbox)
-								PBDebug.log("Box: #{x[0]}, index: #{x[1]}")
 								@storageScreen.storage.pbMove(destbox,firstfree,x[0],x[1])
 							}
 							@storageScene.clearMultiselect
