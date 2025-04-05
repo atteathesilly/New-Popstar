@@ -1,0 +1,12 @@
+#-------------------------------
+[ANOTHERPOSSIBLEERIKA]
+Name = Another Possible
+Gender = Female
+BaseMoney = 80
+BattleBGM = Battle another
+#-------------------------------
+[ANOTHERPOSSIBLEGIOVANNI]
+Name = Another Possible
+Gender = Male
+BaseMoney = 80
+BattleBGM = Battle another

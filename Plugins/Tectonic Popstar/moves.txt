@@ -1,0 +1,781 @@
+[BLOSSOMWINDS]
+Name = Blossom Winds
+Type = GRASS
+Category = Special
+Power = 60
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = RaiseUserMainStats1
+Flags = CanProtect,Wind
+EffectChance = 20
+Description = The user blasts the target with a gust of winds filled with fruit blossoms, 20% chance to raise all stats
+Animation = LEAFTORNADO
+#-------------------------------
+[CALLMRSHINE]
+Name = Call Mr. Shine
+Type = FIRE
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = BurnTargetIfInEclipse
+Flags = CanProtect,Blade
+EffectChance = 100
+Description = The user calls in their pal, Mr. Shine. During eclipse, the target also becomes burned.
+Animation = MOONBLAST
+#-------------------------------
+[PODSLAMABAM]
+Name = Pod Slam-a-Bam
+Type = BUG
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = AllNearFoes
+FunctionCode = LowerTargetSpd2
+Flags = CanProtect,Blade
+EffectChance = 100
+Description = The user slings a pod of webs at nearby foes. This lowers the target's speed stat by two steps
+Animation = STICKYWEB
+#-------------------------------
+[NEEDLETRAP]
+Name = Needle Trap
+Type = BUG
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = BindTarget3
+Flags = CanProtect,Blade
+EffectChance = 100
+Description = The user throws needles or spears at the target. The target is then trapped for 3 turns.
+Animation = TWINEEDLE
+#-------------------------------
+[DYNASBLADE]
+Name = Dyna's Blade
+Type = FLYING
+Category = Physical
+Power = 85
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = DoesSpecialDamage
+Flags = CanProtect,Blade
+Description = The user attacks with their wings sending blade-like wind to opponents, dealing damage through their Sp. Def rather than their Defense.
+Animation = AIRSLASH
+#-------------------------------
+[PRIMALTORMENT]
+Name = Primal Torment
+Type = DARK
+Category = Status
+Accuracy = 100
+TotalPP = 1
+Target = AllNearFoes
+FunctionCode = EmpoweredTorment
+Flags = CanProtect,Empowered
+Description = The user torments all near foes, preventing them from repeating moves. The user becomes Dark-type.
+Animation = TORMENT
+#-------------------------------
+[CAPTHROW]
+Name = Cap Throw
+Type = GRASS
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Sleep
+Flags = CanProtect,
+EffectChance = 50
+Description = The user throws their mushroom cap covered in spores. 50% chance to sleep.
+Animation = SLAM
+#-------------------------------
+[HATSOFF]
+Name = Hats off to you
+Type = GRASS
+Category = Special
+Power = 60
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Poison
+Flags = CanProtect,
+EffectChance = 100
+Description = The user throws their mushroom cap covered in poisonous powder. Always poisons
+Animation = SLAM
+#-------------------------------
+[EYEROLL]
+Name = Eye Roll
+Type = NORMAL
+Category = Physical
+Power = 30
+Accuracy = 100
+TotalPP = 30
+Target = NearOther
+FunctionCode = RockRoll
+Flags = CanProtect,
+Description = The user who is a giant fucking eye rolls into the target. Its power doubles if it hits in succession.
+Animation = ROLLOUT
+#-------------------------------
+[PETALPLOW]
+Name = Petal Plow
+Type = GRASS
+Category = Physical
+Power = 100
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = RecoilQuarterOfDamageDealt
+Flags = CanProtect,
+Description = The user rams into the opponent with their flowery head. The user also takes 25% recoil.
+Animation = FRENZYPLANT
+#-------------------------------
+[BEAMATTACK]
+Name = Beam Attack
+Type = PSYCHIC
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Numb
+Flags = CanProtect,
+EffectChance = 50
+Description = The user attacks the target with a beam attack. 50% chance to Numb.
+Animation = THUNDERBOLT
+#-------------------------------
+[HAMMERFLIP]
+Name = Super Hammer Flip
+Type = FIGHTING
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = TwoTurnAttackInvulnerableInSky
+Flags = CanProtect,
+Description = The user soars into the sky using a bugged hammer, becoming invulnerable, then strikes with said hammer on the second turn.
+Animation = WOODHAMMER
+#-------------------------------
+[LAVABOMB]
+Name = Lava Bomb
+Type = FIRE
+Category = Special
+Power = 90
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = TwoTurnAttackInvulnerableUnderwater
+Flags = CanProtect,
+Description = The user heads into the background, becoming invincible, then attacks on the second turn.
+Animation = LAVAPLUME
+#-------------------------------
+[MEGATONPUNCH]
+Name = Megaton Punch
+Type = FIGHTING
+Category = Physical
+Power = 110
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Icebreaker
+Flags = CanProtect,CanMagicCoat,Punch
+Description = The user shatters the ground with a punch to clear all hazards and hit the opponent. The user suffers 33% recoil.
+Animation = EARTHQUAKE
+#-------------------------------
+[SANDCASTLE]
+Name = Sand Castle
+Type = GROUND
+Category = Special
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = RaiseUserDef4
+Flags = CanProtect,
+Description = The user attacks using a sandcastle, this raises the users defense four steps.
+Animation = SANDTOMB
+#-------------------------------
+[BOMBSTRAP]
+Name = Strap a bomb to a chest
+Type = FIRE
+Category = Status
+Accuracy = 0
+TotalPP = 5
+Target = NearOther
+FunctionCode = StartPerishCountsForAllBattlers
+Description = Squashini does a fun trick and straps a bomb to the targets chest, they will die in three turns, unless it switches out of battle.
+Animation = TRICK
+#-------------------------------
+[SCIENCELAB]
+Name = Science Lab
+Type = POISON
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = NumbBurnOrFrostbiteTarget
+Flags = CanProtect,
+EffectChance = 45
+Description = The user strikes a strange concoction. It has a 15% chance each to numb, burn, or frostbite.
+Animation = ACID
+#-------------------------------
+[STONESMASH]
+Name = Stone Smash
+Type = ROCK
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+Priority = 1
+FunctionCode = ProtectUser
+Flags = CanProtect,
+Description = The user transforms into a stone statue while in the air, this has priority and protects the user.
+Animation = SMACKDOWN
+#-------------------------------
+[MAGMABELCH]
+Name = Magma Belch
+Type = FIRE
+Category = Special
+Power = 1
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = PowerDependsOnUserStockpile
+Flags = CanProtect
+Description = The power stored using the move Stockpile is released all at once in an attack. 150 base power per Stockpile charge.
+Animation = FIREBLAST
+#-------------------------------
+[KABUKIBREATH]
+Name = Kabuki Breath
+Type = ICE
+Category = Special
+Power = 75
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = BindTarget3
+Flags = CanProtect,
+Description = The user breaths a breath of frozen air filled with baby shrimp with kabuki properties, this binds the target for 3 turns.
+Animation = FROSTBREATH
+#-------------------------------
+[TRACTORBEAM]
+Name = Tractor Beam
+Type = ELECTRIC
+Category = Special
+Power = 60
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = StealsItem
+Flags = CanProtect,
+Description = The user attacks and steals the foe's held item simultaneously. Items stolen from wild Pokémon are stored.
+Animation = THUNDER
+#-------------------------------
+[ICEWALL]
+Name = Ice Wall Maker
+Type = ICE
+Category = Physical
+Power = 55
+Accuracy = 100
+TotalPP = 12
+Target = AllNearFoes
+Priority = 2
+FunctionCode = ProtectUserSideFromMultiTargetMoves
+Flags = CanProtect,Wind
+EffectChance = 100
+Description = The user makes an ice wall where the opponent it. It also protects the user's side from multihit moves
+Animation = ICYWIND
+#-------------------------------
+[BUILDSNAP]
+Name = Building Snap
+Type = ROCK
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = DoubleDamageFirstTurn
+Flags = CanProtect,Biting
+Description = The user surprise attacks by biting from inside its building. This deals double damage on the user's first turn out.
+Animation = CRUNCH
+#-------------------------------
+[FAKERINHALE]
+Name = Inhale?
+Type = DARK
+Category = Adaptive
+Power = 250
+Accuracy = 100
+TotalPP = 1
+Target = NearOther
+FunctionCode = ReplaceMoveWithTargetLastMoveUsed
+Flags = CantForce
+Description = It enables the user to permanently learn the move last used by the foe. Once used, Inhale disappears.
+#-------------------------------
+[HATTRICK]
+Name = Hat Trick
+Type = FAIRY
+Category = Special
+Power = 60
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = UseRandomNonSignatureMove
+Flags = CanProtect,
+EffectChance = 100
+Description = The user blasts the opponent with something out of its hat, this does damage and calls a random move.
+Animation = ROCKTHROW
+#-------------------------------
+[FROSTYFALL]
+Name = Frosty Fall
+Type = ICE
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = AttacksWithDefense
+Flags = CanProtect,
+Description = The user slams into the opponent with its icy body, dealing damage based on the user's Defense stat.
+Animation = BODYPRESS
+#-------------------------------
+[FLOATYFALL]
+Name = Floaty Fall
+Type = WATER
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = AttacksWithSpDef
+Flags = CanProtect,
+Description = The user slams into the opponent with its wet body, dealing damage based on the user's Special Defense stat.
+Animation = BODYPRESS
+#-------------------------------
+[JUMPSCARE]
+Name = Jump Scare
+Type = GHOST
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+Priority = 3
+FunctionCode = FlinchTargetFailsIfNotUserFirstTurn
+Flags = CanProtect,
+EffectChance = 100
+Description = An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.
+Animation = ROAR
+#-------------------------------
+[FINGERSNAP]
+Name = Finger Snap
+Type = FIGHTING
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Flinch
+Flags = CanProtect,
+EffectChance = 40
+Description = The user snaps at the target and has a 40% chance to make it flinch.
+Animation = FAKEOUT
+#-------------------------------
+[TOXICSLIDE]
+Name = Toxic Slide
+Type = POISON
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = SwitchOutUserDamagingMove
+Flags = CanProtect,
+Description = After making its attack, the user rushes back to switch places with a party Pokémon in waiting.
+Animation = POISONJAB
+#-------------------------------
+[BLADEDROLL]
+Name = Bladed Roll
+Type = STEEL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 30
+Target = NearOther
+FunctionCode = RockRoll
+Flags = CanProtect,Blade
+Description = The user who is covered in blades rolls into the target. Its power doubles if it hits in succession.
+Animation = SACREDSWORD
+#-------------------------------
+[LIGHTSPEEDDASH]
+Name = Light Speed Dash
+Type = ELECTRIC
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+Priority = 2
+FunctionCode = SwitchOutUserDamagingMove
+Flags = CanProtect,
+Description = The user charges the target at blinding speed. This attack always goes before any other move and switches the user out.
+Animation = VOLTSWITCH
+#-------------------------------
+[WAKEUPSPLASH]
+Name = Wake-Up Splash
+Type = WATER
+Category = Special
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = WakeUpSlap
+Flags = CanProtect,
+Description = This attack inflicts double damage on a sleeping target. It also wakes the target up, however.
+Animation = WATERGUN
+#-------------------------------
+[PKFIRE]
+Name = PK Fire
+Type = FIRE
+Category = Special
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = EffectivenessIncludesPsychicType
+Flags = CanProtect,
+Description = The user attacks the target with fire conjured with PSI. This move is also Psychic-type.
+Animation = FLAMETHROWER
+#-------------------------------
+[PKTHUNDER]
+Name = PK Thunder
+Type = ELECTRIC
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = EffectivenessIncludesPsychicType
+Flags = CanProtect,
+Description = The user attacks the target with thunder conjured with PSI. This move is also Psychic-type.
+Animation = THUNDERBOLT
+#-------------------------------
+[PKFREEZE]
+Name = PK Freeze
+Type = ICE
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = EffectivenessIncludesPsychicType
+Flags = CanProtect,
+Description = The user attacks the target with ice conjured with PSI. This move is also Psychic-type.
+Animation = ICEBEAM
+#-------------------------------
+[MONSTERFLAME]
+Name = Monster Flame
+Type = FIRE
+Category = Adaptive
+Power = 160
+Accuracy = 0
+TotalPP = 1
+Target = NearOther
+FunctionCode = AlwaysHits
+Flags = 
+Description = The user unleashes its flaming super ability. Can't miss and skips protections. Only one use per battle.
+Animation = BLASTBURN
+#-------------------------------
+[SNOWBOWL]
+Name = Snow Bowl
+Type = ICE
+Category = Adaptive
+Power = 160
+Accuracy = 0
+TotalPP = 1
+Target = NearOther
+FunctionCode = AlwaysHits
+Flags = 
+Description = The user unleashes its frozen super ability. Can't miss and skips protections. Only one use per battle.
+Animation = BLIZZARD
+#-------------------------------
+[FLARESPARK]
+Name = Flare Spark
+Type = ELECTRIC
+Category = Adaptive
+Power = 160
+Accuracy = 0
+TotalPP = 1
+Target = NearOther
+FunctionCode = AlwaysHits
+Flags = 
+Description = The user unleashes its electric super ability. Can't miss and skips protections. Only one use per battle.
+Animation = THUNDER
+#-------------------------------
+[UNBEARABLEFALL]
+Name = Unbearable Fall
+Type = NORMAL
+Category = Physical
+Power = 1
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = ScalesHeavierThanTarget
+Flags = CanProtect,
+Description = The user slams into the foe with its heavy body. The heavier the user, the greater the damage.
+Animation = BODYSLAM
+#-------------------------------
+[MORPHOSWORD]
+Name = Morpho Sword
+Type = FIRE
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Leech
+Flags = CanProtect,Blade
+EffectChance = 40
+Description = The user slashes at the target with a sword of judgement, this has a 40% chance to burn.
+Animation = SACREDSWORD
+#-------------------------------
+[PAINTRUSH]
+Name = Paint Rush
+Type = STEEL
+Category = Physical
+Power = 120
+Accuracy = 100
+TotalPP = 10
+Target = ClosestNearFoe
+FunctionCode = RampageKOsRaiseSpeed1
+Flags = CanProtect,
+Description = The user attacks in a paint covered blind rage for three turns. Raises Speed if a target is knocked out by this move.
+Animation = BEHEMOTHBASH
+#-------------------------------
+[DROPPYCOPY]
+Name = Droppy Copy
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 12
+Target = NearOther
+Priority = 2
+FunctionCode = DroppyCopy
+Flags = CanProtect
+EffectChance = 100
+Description = The user reflects the target's type, making it the same type as the target, this goes before any other move.
+#-------------------------------
+[DARKESTBLAST]
+Name = Darkest Blast
+Type = DARK
+Category = Adaptive
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = Leech
+Flags = CanProtect,
+EffectChance = 50
+Description = The user conjures pure dark matter around it to attack the target. 50% to Leech the opponent.
+Animation = DARKPULSE
+#-------------------------------
+[KIRBYDANCE]
+Name = Kirby Dance
+Type = FAIRY
+Category = Status
+Accuracy = 100
+TotalPP = 5
+Target = User
+FunctionCode = KirbyDance
+Flags = CanSnatch,Dance
+Description = The user raises all of their stats by two steps and is healed by 50%. Fails unless a foe fainted last turn.
+Animation = QUIVERDANCE
+#-------------------------------
+[MEDIARAMA]
+Name = Mediarama
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 5
+Target = UserAndAllies
+FunctionCode = HealUserAndAlliesQuarterOfTotalHPCureStatus
+Description = The user restores its side of the field's hp by half with cognitive healing magic.
+Animation = RECOVER
+#-------------------------------
+[KABOOM]
+Name = Kaboom
+Type = DRAGON
+Category = Special
+Power = 60
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = FlameSpikes
+Flags = CanProtect,Pulse
+Description = The user launches an explosive spell from its dragon form, dealing damage, setting a layer of flame spikes.
+Animation = FLAMEBURST
+#-------------------------------
+[BOXBUILD]
+Name = Box Build
+Type = ROCK
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = UserOrNearOther
+FunctionCode = UserOrTargetMakesSubstitute
+Flags = CanProtect,CanMagicCoat
+Description = The user makes a box that serves as a substitute for itself or the target.
+#-------------------------------
+[HMROCKCLIMB]
+Name = Rock Climb
+Type = NORMAL
+Category = Physical
+Power = 90
+Accuracy = 85
+TotalPP = 15
+Target = NearOther
+FunctionCode = Dizzy
+Flags = CanProtect,
+EffectChance = 20
+Description = The user attacks the target by smashing into it with incredible force. It has a 20% chance to dizzy.
+Animation = ROCKCLIMB
+#-------------------------------
+[HMCUT]
+Name = Cut
+Type = BUG
+Category = Physical
+Power = 50
+Accuracy = 100
+TotalPP = 25
+Target = NearOther
+FunctionCode = Basic
+Flags = CanProtect,Blade
+Description = The target is cut with a scythe or a claw. It can also be used to cut down thin trees.
+Animation = CUT
+#-------------------------------
+[HMSTRENGTH]
+Name = Strength
+Type = NORMAL
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Basic
+Flags = CanProtect,
+Description = The target is slugged with a punch thrown at maximum power.
+Animation = STRENGTH
+#-------------------------------
+[HMROCKSMASH]
+Name = Rock Smash
+Type = FIGHTING
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = LowerTargetDef3
+Flags = CanProtect,
+EffectChance = 50
+Description = The user attacks with a punch that can shatter a rock. It may also lower the foe's Defense stat three steps.
+Animation = ROCKSMASH
+#-------------------------------
+[HMHEADBUTT]
+Name = Headbutt
+Type = NORMAL
+Category = Physical
+Power = 60
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Numb
+Flags = CanProtect,
+EffectChance = 20
+Description = The user sticks out its head and attacks by charging into the foe. It has a 20% chance to numb.
+Animation = HEADBUTT
+#-------------------------------
+[DEEPSLEEP]
+Name = Deep Sleep
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 4
+Target = User
+FunctionCode = RaiseUserMainStats2IfAsleep
+Flags = CanSnatch
+Description = This move raises all the user's stats by two steps. Can only be used while asleep.
+Animation = YAWN
+#-------------------------------
+[ICEKINE]
+Name = Ice Kine
+Type = WATER
+Category = Special
+Power = 90
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Frostbite
+Flags = CanProtect,Wind
+EffectChance = 30
+Description = Kine using the ice ability in combination with its fishness on the target. It has a 30% chance to frostbite.
+Animation = ICYWIND
+#-------------------------------
+[FIRERICK]
+Name = Fire Rick
+Type = GROUND
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Burn
+Flags = CanProtect,Wind
+EffectChance = 30
+Description = Rick using the fire ability in combination with its hamsterness on the target. It has a 30% chance to burn.
+Animation = FLAMETHROWER
+#-------------------------------
+[SPARKCOO]
+Name = Spark Coo
+Type = FLYING
+Category = Adaptive
+Power = 90
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Numb
+Flags = CanProtect,Wind
+EffectChance = 30
+Description = Coo using the fire ability in combination with its owlness on the target. It has a 30% chance to numb.
+Animation = THUNDERBOLT
+#-------------------------------
+[INHALE]
+Name = Inhale
+Type = NORMAL
+Category = Physical
+Power = 50
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = SetUserTypesToTargetTypes
+Flags = CanProtect,
+EffectChance = 30
+Description = The user inhales the target and copies the target's type.
+Animation = SWALLOW
+#-------------------------------
+[COPYABILITY]
+Name = Copy Ability
+Type = FAIRY
+Category = Adaptive
+Power = 90
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = TypeIsUserFirstType
+Flags = CanProtect,Sound,Blade,Punch,Kick,Dance,Pulse,Wind
+Description = The user attacks with its copy ability. Type depends on the users type and it counts as every move type.
+Animation = METRONOME
