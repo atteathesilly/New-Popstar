@@ -1,0 +1,9 @@
+KIRBY_STONE_SHOP = [
+	:RAINBOWDROP,
+	:CRYSTALSHARD,
+	:HEARTSTAR,
+]
+
+def kirbyStoneShop
+    pbPokemonMart(KIRBY_STONE_SHOP)
+end
