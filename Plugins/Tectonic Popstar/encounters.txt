@@ -1,44 +1,109 @@
 #-------------------------------
 [926] # Popstar Island Cafe
 SewerFloor,20
-    22,DIALGA,21,23
-    22,MUNCHLAX,21,23
-    22,SOLOSIS,21,23
-    22,TRUBBISH,21,23
-    12,VOLTORB,21,23
+    22,VOID,21,23
+    22,RICK,21,23
+    22,KINE,21,23
+    22,COO,21,23
 #-------------------------------
 [927] # Popstar Island
 Land,20
-    100,FLORA,5,6
+    20,FLORA,5,6
+    20,BOBO,5,6
+    20,WADDLEDEE,5,6
+    20,GAWGAW,5,6
+    20,UFO,5,6
+    20,BOTEN,5,6
 Puddle,15
-    100,WADDLEDOO,5,6
+    20,WADDLEDOO,5,6
+    20,GUSSA,5,6
+    20,WADDLEDEE,5,6
+    20,BLIPPER,5,6
+    20,DRIFTER,5,6
+    20,PHANTA,5,6
 FloweryGrass,20
-    100,CAPPY,5,6
+    20,CAPPY,5,6
+    20,PUPA,5,6
+    20,WADDLEDEE,5,6
+    20,BOXIN,5,6
+    20,FRIGIS,5,
+    20,VENOG,5,6
 FloweryGrass2,20
-    100,WHISPYJR,5,6
+    20,WHISPYJR,5,6
+    20,CAPILLER,5,6
+    20,WADDLEDEE,5,6
+    20,DUPA,5,6
+    20,SLIPPY,5,6
+    20,GORDO,5,6
 #-------------------------------
 [928] # Popstar island cave
 DarkCave,20
-    100,MOOKIE,5,6
+    20,MOOKIE,5,6
+    20,BRONTOBURT,5,6
+    20,CAPER,5,6
+    20,MRPUMPKIN,5,6
+    20,SKULLER,5,6
+    20,GLUNK,5,6
 Puddle,15
-    100,BLINKBAT,5,6
+    20,BLINKBAT,5,6
+    20,AWOOFY,5,6
+    20,EMBIRD,5,6
+    20,SQUISHY,5,6
+    20,MADOO,5,6
 FloweryGrass,20
-    100,KRACKOJR,5,6
+    20,KRACKOJR,5,6
+    20,BLOCKIN,5,6
+    20,PUFFY,5,6
+    20,GANSAN,5,6
+    20,SNOPPY,5,6
 FloweryGrass2,20
-    100,KABU,5,6
+    20,KABU,5,6
+    20,BEANBON,5,6
+    20,BEETLEY,5,6
+    20,GALBO,5,6
+    20,ARMOROID,5,6
 #-------------------------------
 [929] # Popstar Island Temple area
 LandSparse,15
-    100,ANTIKIRBY,15,20
+    20,ANTIKIRBY,15,20
+    20,MASTERHAND,15,20
+    20,CRAZYHAND,15,20
+    20,HEAVYLOBSTER,15,20
+    20,COMPUTERVIRUS,15,20
+    20,METROID,15,20
+    20,NODDY,15,20
+    20,ICEDRAGON,15,20
+    20,TORNADON,15,20
+    20,LANDIA,15,20
 #-------------------------------
 [930] # Popstar Island Valley
 Land,20
-    100,IRONMAM,10,11
+    20,IRONMAM,10,11
+    20,SANDRAN,10,11
+    20,BUFFAHORN,10,11
+    20,CHILLY,10,11
+    20,BUTTERFLY,10,11
 Puddle,15
-    100,LOBZILLA,10,11
+    20,LOBZILLA,10,11
+    20,PGOLEM,10,11
+    20,GATOR,10,11
+    20,PLUGG,10,11
+    20,DROPPY,10,11
 FloweryGrass,20
-    100,CHEMITORY,10,11
+    20,CHEMITORY,10,11
+    20,SCARFY,10,11
+    20,FLOTZO,10,11
+    20,FLAMINLEO,10,11
+    20,QBBY,10,11
 FloweryGrass2,20
-    100,CORORI,10,11
+    20,CORORI,10,11
+    20,PLASMAWISP,10,11
+    20,NESP,10,11
+    20,BUGZZY,10,11
+    20,JOBSKI,10,11
 LandTall,20
     20,TORTORNER,10,11
+    20,SIMIRROR,10,11
+    20,CALLER,10,11
+    20,GRIZZO,10,11
+    20,DARKMATTER,10,11
