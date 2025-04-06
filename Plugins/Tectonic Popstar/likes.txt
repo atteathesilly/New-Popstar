@@ -1,0 +1,14 @@
+ROCKSTAR,Planet Rock Star
+POPSTAR,Planet Pop Star
+YOURMOM,Your mother
+MAXIMTOMATOS,Maxim Tomato
+DEDEDE,King Dedede
+METAKNIGHT,Meta Knight
+WARPSTAR,Warp Star Racing
+HALCANDRA,Halcandra
+MAGOLORLAND,Merry Magoland
+SMASHBROS,Smash Bros.
+WADDLEDEE,Waddle Dee Town
+GALACTICNOVA,Galactic Nova
+HALTMAN,Haltmann Corporation
+KIRBY,Kirby
