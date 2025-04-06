@@ -1,6 +1,6 @@
 #-------------------------------
 [926]
-# Popstar Island Cafe
+ImportName = Popstar Island Cafe
 Outdoor = false
 ShowArea = true
 Bicycle = false
@@ -14,7 +14,7 @@ TrainerVictoryME = VICTORYTRAINERDPPT.ogg
 WildCaptureME = VICTORYWILDPOKEMONHGSS.ogg
 #-------------------------------
 [927]
-# Popstar Island
+ImportName = Popstar Island
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -29,7 +29,7 @@ SavingBlocked = false
 NoTeamEditing = false
 #-------------------------------
 [928]
-# Popstar island cave
+ImportName = Popstar island cave
 Outdoor = false
 ShowArea = false
 Bicycle = true
@@ -43,7 +43,7 @@ SavingBlocked = false
 NoTeamEditing = false
 #-------------------------------
 [929]
-# Popstar Island Temple area
+ImportName = Popstar Island Temple area
 Outdoor = false
 ShowArea = false
 Bicycle = true
@@ -54,7 +54,7 @@ WildCaptureME = Voltorb Flip win.ogg
 Environment = Rock
 #-------------------------------
 [930]
-# Popstar Island Valley
+ImportName = Popstar Island Valley
 Outdoor = true
 ShowArea = false
 Bicycle = true
