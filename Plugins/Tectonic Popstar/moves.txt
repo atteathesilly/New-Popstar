@@ -776,6 +776,6 @@ Accuracy = 100
 TotalPP = 12
 Target = NearOther
 FunctionCode = TypeIsUserFirstType
-Flags = CanProtect,Sound,Blade,Punch,Kick,Dance,Pulse,Wind
+Flags = CanProtect,Sound,Blade,Punch,Kick,Dance,Pulse,Wind,Biting
 Description = The user attacks with its copy ability. Type depends on the users type and it counts as every move type.
 Animation = METRONOME
