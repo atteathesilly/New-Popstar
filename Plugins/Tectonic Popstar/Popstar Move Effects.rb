@@ -13,45 +13,6 @@ class PokeBattle_Move_EffectivenessIncludesPsychicType < PokeBattle_Move
   end
 end
 #===============================================================================
-# User copies target's types, also dizzies them (Droppy Copy)
-#===============================================================================
-class PokeBattle_Move_DroppyCopy < PokeBattle_DizzyMove
-  def ignoresSubstitute?(_user); return true; end
-
-  def pbMoveFailed?(user, _targets, show_message)
-      unless user.canChangeType?
-          if show_message
-              @battle.pbDisplay(_INTL("But it failed, since #{user.pbThis(true)} can't have its types changed!"))
-          end
-          return true
-      end
-      return false
-  end
-
-  def pbFailsAgainstTarget?(user, target, show_message)
-      newTypes = target.pbTypes(true)
-      if newTypes.length == 0 # Target has no type to copy
-          @battle.pbDisplay(_INTL("But it failed, since #{target.pbThis(true)} has no types!")) if show_message
-          return true
-      end
-      if user.pbTypes == target.pbTypes && user.effects[:Type3] == target.effects[:Type3]
-          @battle.pbDisplay(_INTL("But it failed, since #{user.pbThis(true)} && #{target.pbThis(true)} share the exact same types!")) if show_message
-          return true
-      end
-      return false
-  end
-
-  def pbEffectAgainstTarget(user, target)
-      user.pbChangeTypes(target)
-      @battle.pbDisplay(_INTL("{1}'s type changed to match {2}'s!",
-         user.pbThis, target.pbThis(true)))
-  end
-  def initialize(battle, move)
-    super
-    @statusToApply = :DIZZY
-  end
-end
-#===============================================================================
 # Revives a fainted party member back to 100% HP if a foe fainted last turn (Kirby Dance)
 #===============================================================================
 class PokeBattle_Move_KirbyDance < PokeBattle_PartyMemberEffectMove
@@ -76,5 +37,49 @@ class PokeBattle_Move_KirbyDance < PokeBattle_PartyMemberEffectMove
 
     def getEffectScore(_user, _target)
         return 250
+    end
+end
+#===============================================================================
+# You have absconded with my fungus
+#===============================================================================
+class PokeBattle_Move_AbscondFungus < PokeBattle_Move
+    def switchOutMove?; return true; end
+    def pbCalcDamage(user, target, numTargets = 1)
+        if target.hasRaisedStatSteps?
+            pbShowAnimation(@id, user, target, 1) # Stat step-draining animation
+            @battle.pbDisplay(_INTL("{1} stole the target's boosted stats!", user.pbThis))
+            showAnim = true
+            GameData::Stat.each_battle do |s|
+                next if target.steps[s.id] <= 0
+                if user.pbCanRaiseStatStep?(s.id, user,
+self) && user.pbRaiseStatStep(s.id, target.steps[s.id], user, showAnim)
+                    showAnim = false
+                end
+                target.steps[s.id] = 0
+            end
+        end
+        super
+    end
+
+    def getEffectScore(_user, target)
+        score = 0
+        GameData::Stat.each_battle do |s|
+            next if target.steps[s.id] <= 0
+            score += target.steps[s.id] * 20
+        end
+        return score
+    end
+
+    def shouldHighlight?(_user, target)
+        return target.hasRaisedStatSteps?
+    end
+
+    def pbEndOfMoveUsageEffect(user, targets, numHits, switchedBattlers)
+        return if user.fainted? || numHits == 0
+        switchOutUser(user,switchedBattlers)
+    end
+
+    def getEffectScore(user, target)
+        return getSwitchOutEffectScore(user)
     end
 end

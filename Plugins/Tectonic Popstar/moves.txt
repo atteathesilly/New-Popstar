@@ -557,19 +557,6 @@ Flags = CanProtect,
 Description = The user attacks in a paint covered blind rage for three turns. Raises Speed if a target is knocked out by this move.
 Animation = BEHEMOTHBASH
 #-------------------------------
-[DROPPYCOPY]
-Name = Droppy Copy
-Type = NORMAL
-Category = Status
-Accuracy = 0
-TotalPP = 12
-Target = NearOther
-Priority = 2
-FunctionCode = DroppyCopy
-Flags = CanProtect
-EffectChance = 100
-Description = The user reflects the target's type, making it the same type as the target, this goes before any other move.
-#-------------------------------
 [DARKESTBLAST]
 Name = Darkest Blast
 Type = DARK
@@ -779,3 +766,16 @@ FunctionCode = TypeIsUserFirstType
 Flags = CanProtect,Sound,Blade,Punch,Kick,Dance,Pulse,Wind,Biting
 Description = The user attacks with its copy ability. Type depends on the users type and it counts as every move type.
 Animation = METRONOME
+#-------------------------------
+[ABSCOND]
+Name = Abscond
+Type = NORMAL
+Category = Physical
+Power = 60
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = AbscondFungus
+Flags = CanProtect,CanMirrorMove
+Description = The user does damage, stealing stat changes and switching out
+Animation = THIEF
