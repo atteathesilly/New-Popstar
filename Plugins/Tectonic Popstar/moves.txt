@@ -770,7 +770,7 @@ Animation = METRONOME
 [ABSCOND]
 Name = Abscond
 Type = NORMAL
-Category = Physical
+Category = Adaptive
 Power = 60
 Accuracy = 100
 TotalPP = 5
