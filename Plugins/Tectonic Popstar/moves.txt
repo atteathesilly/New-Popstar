@@ -777,5 +777,5 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = AbscondFungus
 Flags = CanProtect,CanMirrorMove
-Description = The user does damage, stealing stat changes and switching out
+Description = The user absconds the target's positive stat steps, does damage then switches out.
 Animation = THIEF

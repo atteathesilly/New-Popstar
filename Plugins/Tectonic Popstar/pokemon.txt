@@ -3605,7 +3605,7 @@ Weight = 22.0
 Color = Green
 Shape = Head
 Kind = Copying
-Pokedex = He is going to yoink your copy ability
+Pokedex = He is going to abscond your copy ability
 Generation = 0
 #-------------------------------
 [DARKMATTER]
