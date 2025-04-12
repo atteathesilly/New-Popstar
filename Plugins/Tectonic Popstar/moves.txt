@@ -534,7 +534,7 @@ Animation = BODYSLAM
 Name = Morpho Sword
 Type = FIRE
 Category = Physical
-Power = 90
+Power = 100
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
@@ -671,20 +671,6 @@ Flags = CanProtect,
 EffectChance = 50
 Description = The user attacks with a punch that can shatter a rock. It may also lower the foe's Defense stat three steps.
 Animation = ROCKSMASH
-#-------------------------------
-[HMHEADBUTT]
-Name = Headbutt
-Type = NORMAL
-Category = Physical
-Power = 60
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = Numb
-Flags = CanProtect,
-EffectChance = 20
-Description = The user sticks out its head and attacks by charging into the foe. It has a 20% chance to numb.
-Animation = HEADBUTT
 #-------------------------------
 [DEEPSLEEP]
 Name = Deep Sleep
