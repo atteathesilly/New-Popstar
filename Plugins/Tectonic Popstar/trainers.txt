@@ -34,3 +34,8 @@ Pokemon = ZOMBON,30
 Pokemon = WHISPY,30
     Moves = BLOSSOMWINDS,DEFOG,LEECHSEED,FAKEOUT
     AbilityIndex = 1 # Aeroshell
+#-------------------------------
+[ANOTHERPOSSIBLECYRUS,Cyrus]
+Pokemon = HONCHKROW,70
+    Moves = DARKPULSE,AIRSLASH,FINALIZE,DROWN
+    AbilityIndex = 0 # Rattle Em

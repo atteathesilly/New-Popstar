@@ -10,3 +10,9 @@ Name = Another Possible
 Gender = Male
 BaseMoney = 80
 BattleBGM = Battle another
+#-------------------------------
+[ANOTHERPOSSIBLECYRUS]
+Name = Another Possible
+Gender = Male
+BaseMoney = 80
+BattleBGM = Battle another
