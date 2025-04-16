@@ -3,16 +3,16 @@
 Name = Another Possible
 Gender = Female
 BaseMoney = 80
-BattleBGM = Battle another
+BattleBGM = Battle Gym Leader 1
 #-------------------------------
 [ANOTHERPOSSIBLEGIOVANNI]
 Name = Another Possible
 Gender = Male
 BaseMoney = 80
-BattleBGM = Battle another
+BattleBGM = Battle Gym Leader 2
 #-------------------------------
 [ANOTHERPOSSIBLECYRUS]
 Name = Another Possible
 Gender = Male
 BaseMoney = 80
-BattleBGM = Battle another
+BattleBGM = Battle sang

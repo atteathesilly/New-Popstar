@@ -36,6 +36,27 @@ Pokemon = PLUGG,35
     AbilityIndex = 0 # Thunderstruck
 #-------------------------------
 [ANOTHERPOSSIBLECYRUS,Cyrus]
+Pokemon = AZELF,70
+    Moves = UTURN,DRAINPUNCH,PSYCHIC,RECOVER
+    AbilityIndex = 0 # Insight Aura
+    Item = REINFORCINGROD
 Pokemon = HONCHKROW,70
     Moves = DARKPULSE,AIRSLASH,FINALIZE,DROWN
     AbilityIndex = 0 # Rattle Em
+    Item = COURAGEBADGE
+Pokemon = MORPHOKNIGHT,70
+    Moves = MORPHOSWORD,XSCISSOR,ELECTROSLASH,VIMRIPPER
+    AbilityIndex = 0 # Butterfly Blade
+    Item = WHETSTONE
+Pokemon = OCTACON,70
+    Moves = WAKEUPSPLASH,LULLABY,BUBBLEBLASTER,FIREBLAST
+    AbilityIndex = 0 # Dreamy Haze
+    Item = MYSTICWATER
+Pokemon = CRAZYHAND,70
+    Moves = ROCKAPULT,FOCUSBLAST,STAREDOWN,LASERFOCUS
+    AbilityIndex = 1 # Adrenaline rush
+    Item = SKILLHERB
+Pokemon = GYARADOS,70
+    Moves = DRAGONDANCE,WATERFALL,ACROBATICS,WYRMWOUNDING
+    AbilityIndex = 1 # City Razer
+    Item = WATERGEM
