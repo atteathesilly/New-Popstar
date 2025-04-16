@@ -129,7 +129,7 @@ Shape = Head
 Kind = Burning
 Pokedex = You spin me right round, baby right round like a record baby right round round round
 Generation = 0
-Evolutions = MRBRIGHT,Level,35
+Evolutions = MRBRIGHT,Level,36
 #-------------------------------
 [MRBRIGHT]
 Name = Mr. Bright

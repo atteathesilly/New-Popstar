@@ -1,39 +1,39 @@
 #-------------------------------
 [ANOTHERPOSSIBLEGIOVANNI,Giovanni]
-Pokemon = NIBELONG,45
+Pokemon = NIBELONG,50
     Moves = FAKEOUT,SACREDLOTS,FURYSWIPES,ASSIST
     AbilityIndex = 0 # Long Odds
-Pokemon = SANDRAN,45
+Pokemon = SANDRAN,50
     Moves = SANDCASTLE,SHOREUP,SCORCHINGSANDS,STEALTHROCK
     AbilityIndex = 0 # Sand Stream
     Item = SMOOTHROCK
-Pokemon = DEKABU,45
+Pokemon = DEKABU,50
     Moves = RETREAT,EARTHQUAKE,ROCKALANCHE,GRINDSTONE
     AbilityIndex = 0 # The Grass and Water one
-Pokemon = BUFFAHORN,45
-    Moves = BODYSLAM,SMARTHORN,ZENHEADBUTT,BULKUP
-    AbilityIndex = 0 # Running Free
+Pokemon = BUFFAHORN,50
+    Moves = CHAOSWHEEL,SMARTHORN,ZENHEADBUTT,BULKUP
+    AbilityIndex = 1 # Outrider
     Item = UTILITYUMBRELLA
-Pokemon = JUMPERSHOOT,45
+Pokemon = JUMPERSHOOT,50
     Moves = DRILLPECK,SWORDSDANCE,VIMRIPPER,SLASH
     AbilityIndex = 1 # Territorial
 #-------------------------------
 [ANOTHERPOSSIBLEERIKA,Erika]
-Pokemon = VICTREEBEL,30
-    Moves = LEAFBLADE,POISONJAB,AERIALACE,ANESTHETIZE
+Pokemon = VICTREEBEL,35
+    Moves = SNAPTRAP,POISONJAB,AERIALACE,ANESTHETIZE
     AbilityIndex = 1 # Flytrap
-Pokemon = LADYIVY,30
-    Moves = KNOCKOFF,PETALPLOW,ENCORE
+Pokemon = LADYIVY,35
+    Moves = KNOCKOFF,PETALPLOW,ROCKALANCHE,FLOWSTATE
     AbilityIndex = 0 # Iron Barbs
-Pokemon = CALLER,30
+Pokemon = CALLER,35
     Moves = POLLENPUFF,GLAMOURFLASH,HEATWAVE,DAZZLINGGLEAM
     AbilityIndex = 1 # On the Wind
-Pokemon = ZOMBON,30
-    Moves = ALLERGY,HEX,POISONSPIKES,GIGADRAIN
-    AbilityIndex = 1 # Infected
-Pokemon = WHISPY,30
-    Moves = BLOSSOMWINDS,DEFOG,LEECHSEED,FAKEOUT
-    AbilityIndex = 1 # Aeroshell
+Pokemon = DEEPSEE,35
+    Moves = BUBBLEBARRAGE,GREYMIST,FAKEOUT,GIGADRAIN
+    AbilityIndex = 0 # Gyre Spin
+Pokemon = PLUGG,35
+    Moves = THUNDERBOLT,CHARGE,NULLPULSE,DRAININGKISS
+    AbilityIndex = 0 # Thunderstruck
 #-------------------------------
 [ANOTHERPOSSIBLECYRUS,Cyrus]
 Pokemon = HONCHKROW,70
