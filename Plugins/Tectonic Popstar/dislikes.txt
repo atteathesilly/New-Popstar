@@ -1,7 +1,7 @@
 ROCKSTAR,Planet Rock Star
 POPSTAR,Planet Pop Star
 YOURMOM,Your mother
-MAXIMTOMATOS,Maxim Tomato
+MAXIMTOMATOS,Maxim Tomatos
 DEDEDE,King Dedede
 METAKNIGHT,Meta Knight
 WARPSTAR,Warp Star Racing
@@ -12,3 +12,17 @@ WADDLEDEE,Waddle Dee Town
 GALACTICNOVA,Galactic Nova
 HALTMAN,Haltmann Corporation
 KIRBY,Kirby
+BEAMATTACK,Beam Attack
+HYNESS,Hyness' Cult
+KANTO,Kanto
+SQUEAK,The Squeaks
+AMAZINGMIRROR,The Mirror World
+ENDLESSEXPLOSIONS,Endless Explosions
+VEHICULARMANSLAUGHTER,Running Over Kirby
+GREENGREENS,Green Greens
+LABDISCOVERA,Lab Discovera
+FORGOTTENLAND,The Forgotten Land
+DREAMLAND,Dreamland
+CAPPYTOWN,Cappy Town
+CHOZO,Chozo
+ADAMSANDLR,Adam Sandler
