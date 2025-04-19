@@ -38,7 +38,7 @@ FunctionCode = LowerTargetSpd2
 Flags = CanProtect,Blade
 EffectChance = 100
 Description = The user slings a pod of webs at nearby foes. This lowers the target's speed stat by two steps
-Animation = STICKYWEB
+Animation = SAVAGESPINOUT
 #-------------------------------
 [NEEDLETRAP]
 Name = Needle Trap
