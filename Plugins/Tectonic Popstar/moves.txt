@@ -765,3 +765,14 @@ FunctionCode = AbscondFungus
 Flags = CanProtect,CanMirrorMove
 Description = The user absconds the target's positive stat steps, does damage then switches out.
 Animation = THIEF
+#-------------------------------
+[WHEELIERIDE]
+Name = Wheelie Ride
+Type = STEEL
+Category = Status
+Accuracy = 0
+TotalPP = 5
+Target = NearAlly
+FunctionCode = DragonRide
+Description = Doubles target ally's Attack and Speed. However, if the user faints, so too does that ally.
+Animation = COACHING
