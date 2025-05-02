@@ -558,7 +558,6 @@ Shape = Head
 Kind = Cube
 Pokedex = I am placing blocks and shit cuz I am in fucking Minecraft, I am placing blocks in shit cuz I am in fucking miiiiinecraft. Ooooh my gooood,  is that fuckin pig, cuz i am fucking steve, i am fucking steve.
 Generation = 0
-WildItemUncommon = FIRESTONE
 Evolutions = BLOCKY,Level,22
 #-------------------------------
 [BLOCKY]
@@ -586,7 +585,6 @@ Shape = Head
 Kind = Rock
 Pokedex = The hierarchy of the Kirby Cinematic Universe is about to change.
 Generation = 0
-WildItemUncommon = FIRESTONE
 #-------------------------------
 [CAPPY]
 Name = Cappy
@@ -4106,7 +4104,7 @@ Shape = Head
 Kind = Void
 Pokedex = Yeah I'd make a cult revolving around this guy
 Generation = 0
-Evolutions = KIRBY,Level,66
+Evolutions = KIRBY,Item,WARPSTAR
 Flags = Legendary
 #-------------------------------
 [KIRBY]
