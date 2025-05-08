@@ -504,19 +504,6 @@ Flags =
 Description = The user unleashes its frozen super ability. Can't miss and skips protections. Only one use per battle.
 Animation = BLIZZARD
 #-------------------------------
-[FLARESPARK]
-Name = Flare Spark
-Type = ELECTRIC
-Category = Adaptive
-Power = 160
-Accuracy = 0
-TotalPP = 1
-Target = NearOther
-FunctionCode = AlwaysHits
-Flags = 
-Description = The user unleashes its electric super ability. Can't miss and skips protections. Only one use per battle.
-Animation = THUNDER
-#-------------------------------
 [UNBEARABLEFALL]
 Name = Unbearable Fall
 Type = NORMAL
@@ -776,3 +763,16 @@ Target = NearAlly
 FunctionCode = DragonRide
 Description = Doubles target ally's Attack and Speed. However, if the user faints, so too does that ally.
 Animation = COACHING
+#-------------------------------
+[SPARKWAVE]
+Name = Spark Wave
+Type = ELECTRIC
+Category = Special
+Power = 120
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = TwoTurnAttackOneTurnInRainstorm
+Flags = CanProtect
+Description = The user charges, then attacks on the second turn. Charges instantly in rainstorm.
+Animation = CHARGEBEAM
