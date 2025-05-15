@@ -14,6 +14,7 @@ Land,20
     20,GAWGAW,5,6
     20,UFO,5,6
     20,BOTEN,5,6
+    20,YUNGOOS,5,6
 Puddle,15
     20,WADDLEDOO,5,6
     20,GUSSA,5,6
@@ -35,6 +36,7 @@ FloweryGrass2,20
     20,DUPA,5,6
     20,SLIPPY,5,6
     20,GORDO,5,6
+    20,BURMY,5,6
 #-------------------------------
 [928] # Popstar island cave
 DarkCave,20
@@ -50,6 +52,7 @@ Puddle,15
     20,EMBIRD,5,6
     20,SQUISHY,5,6
     20,MADOO,5,6
+    20,LOTAD,5,6
 FloweryGrass,20
     20,KRACKOJR,5,6
     20,BLOCKIN,5,6
