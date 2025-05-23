@@ -5,7 +5,7 @@ NamePlural = Rainbow Drop
 Pocket = 1
 Price = 8000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem
 Description = A strange substance that makes certain species of Pokémon evolve. It can be used to forge a legendary blade.
 #-------------------------------
 [CRYSTALSHARD]
@@ -14,7 +14,7 @@ NamePlural = Crystal Shards
 Pocket = 1
 Price = 8000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem
 Description = An interesting crystal that makes certain species of Pokémon evolve. It is very hard to find.
 #-------------------------------
 [HEARTSTAR]
@@ -23,7 +23,7 @@ NamePlural = Heart Star
 Pocket = 1
 Price = 8000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem
 Description = A peculiar item that makes certain species of Pokémon evolve. It is concentrated gratitude.
 #-------------------------------
 [WARPSTAR]
@@ -32,5 +32,5 @@ NamePlural = Warp Star
 Pocket = 1
 Price = 8000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem
 Description = A peculiar item that shows Void happiness. Can also be used to race.
